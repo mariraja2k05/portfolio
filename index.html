@@ -1,211 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mariraja | Data Science & ML Engineer</title>
-    <meta
-      name="description"
-      content="Portfolio of Mariraja - Data Science and Machine Learning Engineer"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body class="bg-slate-950 text-slate-100 antialiased">
-    <header class="sticky top-3 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur" id="top">
-      <div class="mx-auto flex min-h-[104px] w-[94%] max-w-6xl items-center justify-center gap-4">
-        <nav class="flex flex-wrap gap-x-7 gap-y-2 text-base text-slate-300" aria-label="Primary navigation">
-          <a class="nav-link transition-colors hover:text-sky-300" href="#projects">Project</a>
-          <a class="nav-link transition-colors hover:text-sky-300" href="#skills">Skills</a>
-          <a class="nav-link transition-colors hover:text-sky-300" href="#training">Training</a>
-          <a class="nav-link transition-colors hover:text-sky-300" href="#education">Education</a>
-          <a class="nav-link transition-colors hover:text-sky-300" href="#certifications">Certifications</a>
-          <a class="nav-link transition-colors hover:text-sky-300" href="#contact">Contact</a>
-        </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mariraja · Data Science & ML Engineer</title>
+  <meta name="description" content="Portfolio of Mariraja — Data Science and Machine Learning Engineer" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══ CURSOR ══ -->
+<div class="cursor" id="cursor"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ══ SCROLL PROGRESS ══ -->
+<div class="scroll-bar" id="scrollBar"></div>
+
+<!-- ══ CANVAS BACKGROUND ══ -->
+<canvas id="bgCanvas"></canvas>
+
+<!-- ══ HEADER ══ -->
+<header id="header">
+  <div class="header-inner">
+    <a class="logo" href="#top">Mariraja</a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#skills">Skills</a>
+      <a class="nav-link" href="#training">Training</a>
+      <a class="nav-link" href="#education">Education</a>
+      <a class="nav-link" href="#certifications">Certs</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ══ MOBILE NAV ══ -->
+<div class="mobile-nav" id="mobileNav">
+  <a class="mobile-nav-link" href="#projects">Projects</a>
+  <a class="mobile-nav-link" href="#skills">Skills</a>
+  <a class="mobile-nav-link" href="#training">Training</a>
+  <a class="mobile-nav-link" href="#education">Education</a>
+  <a class="mobile-nav-link" href="#certifications">Certifications</a>
+  <a class="mobile-nav-link" href="#contact">Contact</a>
+</div>
+
+<main id="top">
+
+  <!-- ══ HERO ══ -->
+  <section class="hero" id="hero">
+    <div class="hero-noise"></div>
+    <div class="hero-glow g1"></div>
+    <div class="hero-glow g2"></div>
+    <div class="hero-glow g3"></div>
+
+    <div class="hero-content">
+      <div class="hero-left reveal">
+        <p class="hero-kicker"><span class="kicker-line"></span>Data Science & ML Engineer</p>
+        <h1 class="hero-title">
+          <span class="word">Building</span>
+          <span class="word accent-word">Intelligent</span>
+          <span class="word">Systems</span>
+        </h1>
+        <p class="hero-sub">
+          Hey, I'm <strong>Mariraja</strong> — a passionate data science and machine learning student turning raw data into real-world impact. I build predictive models, explore patterns, and create things that matter.
+        </p>
+        <p class="hero-avail"><span class="pulse-dot"></span> Open to internships & freelance</p>
+        <div class="hero-btns">
+          <a class="btn btn-primary" href="#projects">
+            <span class="btn-text">View Work</span>
+            <span class="btn-shine"></span>
+          </a>
+          <a class="btn btn-ghost" href="#contact">Get in Touch</a>
+        </div>
       </div>
-    </header>
 
-    <main>
-      <div class="bg-graphics" aria-hidden="true">
-        <span class="bg-orb orb-1"></span>
-        <span class="bg-orb orb-2"></span>
-        <span class="bg-orb orb-3"></span>
-        <span class="bg-line line-1"></span>
-        <span class="bg-line line-2"></span>
+      <div class="hero-right reveal reveal-delay">
+        <div class="photo-frame">
+          <div class="photo-ring r1"></div>
+          <div class="photo-ring r2"></div>
+          <div class="photo-ring r3"></div>
+          <div class="photo-glow"></div>
+          <img
+            class="hero-photo"
+            src="https://drive.google.com/thumbnail?id=14q87LrUIVB6lSE3pLbWlsrqYypoBPT3W&sz=w1000"
+            alt="Mariraja"
+            loading="lazy"
+            onerror="if(!this.dataset.f){this.dataset.f='1';this.src='https://drive.google.com/uc?export=view&id=14q87LrUIVB6lSE3pLbWlsrqYypoBPT3W';return;}this.onerror=null;this.src='https://ui-avatars.com/api/?name=Mariraja&size=400&background=0d1117&color=00e5ff&bold=true';"
+          />
+          <div class="photo-badge">
+            <span class="badge-dot"></span>
+            <span>Available</span>
+          </div>
+        </div>
       </div>
-      <section class="hero-section relative overflow-hidden pb-16 pt-24 md:pt-28">
-        <div class="pointer-events-none absolute inset-0"></div>
-        <div class="hero-shell relative mx-auto w-[92%] max-w-6xl animate-fade-up">
-          <div class="hero-grid">
-            <div class="hero-main">
-              <p class="hero-kicker">Portfolio · India · 2026</p>
-              <h1 class="hero-title text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
-                <span class="hero-line">DATA SCIENCE</span>
-                <span class="hero-line">ENGINEER</span>
-              </h1>
-              <p class="hero-name">Mariraja</p>
-              <p class="hero-description">
-                I am a data science and machine learning student focused on building practical,
-                real-world solutions. I enjoy working with data, creating predictive models,
-                and translating ideas into usable products.
-              </p>
-              <div class="hero-actions">
-                <a class="hero-btn hero-btn-primary" href="#projects">View Work</a>
-                <a class="hero-btn hero-btn-secondary" href="#contact">Get in Touch</a>
-              </div>
-              <p class="hero-availability">Available for internships and freelance collaborations</p>
-            </div>
-            <div class="hero-photo-wrap" aria-label="Profile image">
-              <img class="hero-photo" src="https://drive.google.com/thumbnail?id=14q87LrUIVB6lSE3pLbWlsrqYypoBPT3W&sz=w1000" alt="Mariraja profile photo" loading="lazy" onerror="if(!this.dataset.fallbackTried){this.dataset.fallbackTried='1';this.src='https://drive.google.com/uc?export=view&id=14q87LrUIVB6lSE3pLbWlsrqYypoBPT3W';return;}this.onerror=null;this.src='https://unavatar.io/linkedin/mariraja';" />
-            </div>
-          </div>
-        </div>
-      </section>
+    </div>
 
-      <section class="py-16" id="projects">
-        <div class="mx-auto w-[92%] max-w-6xl">
-          <h2 class="text-3xl font-bold">Project</h2>
-          <p class="mt-2 text-slate-300">All your GitHub projects are listed automatically below.</p>
-          <div class="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3" id="projectsGrid"></div>
-        </div>
-      </section>
+    <div class="scroll-hint">
+      <div class="mouse"><div class="mouse-wheel"></div></div>
+      <span>Scroll</span>
+    </div>
+  </section>
 
-      <section class="py-16" id="skills">
-        <div class="mx-auto w-[92%] max-w-6xl">
-          <h2 class="text-3xl font-bold">Skills</h2>
-          <div class="skills-wrap mt-8">
-            <div class="skills-orbit" aria-label="Interactive skills circle">
-              <div class="orbit-ring ring-1" aria-hidden="true"></div>
-              <div class="orbit-ring ring-2" aria-hidden="true"></div>
-              <div class="orbit-ring ring-3" aria-hidden="true"></div>
-
-              <div class="skills-center">
-                <p class="skills-center-label">Current Skill</p>
-                <h3 id="activeSkillName">Python</h3>
-              </div>
-
-              <button class="skill-dot orbit-1 is-active" type="button" style="--a: 0deg" data-skill="Python" aria-label="Python">
-                <span class="skill-dot-core"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" loading="lazy" /></span>
-              </button>
-              <button class="skill-dot orbit-2" type="button" style="--a: 45deg" data-skill="Machine Learning" aria-label="Machine Learning">
-                <span class="skill-dot-core">🧠</span>
-              </button>
-              <button class="skill-dot orbit-3" type="button" style="--a: 95deg" data-skill="Data Analysis" aria-label="Data Analysis">
-                <span class="skill-dot-core">📊</span>
-              </button>
-              <button class="skill-dot orbit-1" type="button" style="--a: 128deg" data-skill="Pandas" aria-label="Pandas">
-                <span class="skill-dot-core"><img src="https://cdn.simpleicons.org/pandas/150458" alt="Pandas" loading="lazy" /></span>
-              </button>
-              <button class="skill-dot orbit-2" type="button" style="--a: 170deg" data-skill="NumPy" aria-label="NumPy">
-                <span class="skill-dot-core"><img src="https://cdn.simpleicons.org/numpy/4DABCF" alt="NumPy" loading="lazy" /></span>
-              </button>
-              <button class="skill-dot orbit-3" type="button" style="--a: 220deg" data-skill="Matplotlib" aria-label="Matplotlib">
-                <span class="skill-dot-core"><img src="https://cdn.simpleicons.org/plotly/3F4F75" alt="Matplotlib" loading="lazy" /></span>
-              </button>
-              <button class="skill-dot orbit-2" type="button" style="--a: 280deg" data-skill="SQL" aria-label="SQL">
-                <span class="skill-dot-core"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="SQL" loading="lazy" /></span>
-              </button>
-              <button class="skill-dot orbit-1" type="button" style="--a: 318deg" data-skill="Git & GitHub" aria-label="GitHub">
-                <span class="skill-dot-core"><img src="https://cdn.simpleicons.org/github/cfd4dc" alt="GitHub" loading="lazy" /></span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="py-16" id="training">
-        <div class="mx-auto w-[92%] max-w-6xl">
-          <h2 class="text-3xl font-bold">Training</h2>
-          <article class="training-card card-hover mt-5 rounded-2xl border border-slate-700 bg-gradient-to-b from-slate-900 to-slate-800/70 p-5">
-            <p class="text-xs font-semibold uppercase tracking-wider text-sky-300">Summer Training</p>
-            <h3 class="mt-1 text-xl font-semibold">Summer Training Certificate</h3>
-            <div class="training-media mt-4">
-              <img
-                class="training-image"
-                src="https://drive.google.com/thumbnail?id=1j4ECh2lh4CwNk_igI3H7iXB6JtQkXF7b&sz=w1200"
-                alt="Summer training certificate"
-                loading="lazy"
-                onerror="if(!this.dataset.fallbackTried){this.dataset.fallbackTried='1';this.src='https://drive.google.com/uc?export=view&id=1j4ECh2lh4CwNk_igI3H7iXB6JtQkXF7b';return;}this.onerror=null;this.src='https://picsum.photos/seed/summer-training/1200/760';"
-              />
-            </div>
-            <p class="mt-3 text-slate-300">
-              This certificate represents my summer training completion, focused on practical skills,
-              hands-on implementation, and real-world project learning.
-            </p>
-            <a class="mt-3 inline-block font-semibold text-sky-300 transition hover:text-sky-200" href="https://drive.google.com/file/d/1j4ECh2lh4CwNk_igI3H7iXB6JtQkXF7b/view?usp=drivesdk" target="_blank" rel="noreferrer">View Certificate ↗</a>
-          </article>
-        </div>
-      </section>
-
-      <section class="py-16" id="education">
-        <div class="mx-auto w-[92%] max-w-6xl">
-          <h2 class="text-3xl font-bold">Education</h2>
-          <div class="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
-            <article class="card-hover rounded-2xl border border-slate-700 bg-gradient-to-b from-slate-900 to-slate-800/70 p-5">
-              <p class="text-xs font-semibold uppercase tracking-wider text-sky-300">College</p>
-              <h3 class="mt-1 text-xl font-semibold">Lovely Professional University (LPU)</h3>
-              <p class="mt-2 text-slate-300">B.Tech in Computer Science and Engineering (CSE)</p>
-            </article>
-
-            <article class="card-hover rounded-2xl border border-slate-700 bg-gradient-to-b from-slate-900 to-slate-800/70 p-5">
-              <p class="text-xs font-semibold uppercase tracking-wider text-sky-300">12th Grade</p>
-              <h3 class="mt-1 text-xl font-semibold">Edustar International School</h3>
-              <p class="mt-2 text-slate-300">Board: CBSE</p>
-              <p class="mt-1 text-slate-300">Higher Secondary (XII)</p>
-            </article>
-
-            <article class="card-hover rounded-2xl border border-slate-700 bg-gradient-to-b from-slate-900 to-slate-800/70 p-5">
-              <p class="text-xs font-semibold uppercase tracking-wider text-sky-300">10th Grade</p>
-              <h3 class="mt-1 text-xl font-semibold">Edustar International School</h3>
-              <p class="mt-2 text-slate-300">Board: CBSE</p>
-              <p class="mt-1 text-slate-300">Secondary School (X)</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section class="py-16" id="certifications">
-        <div class="mx-auto w-[92%] max-w-6xl">
-          <h2 class="text-3xl font-bold">Certifications</h2>
-          <p class="mt-2 text-slate-300">Click any certificate card to open your Google Drive certificates folder.</p>
-          <div class="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3" id="certGrid"></div>
-        </div>
-      </section>
-
-      <section class="py-16" id="contact">
-        <div class="mx-auto w-[92%] max-w-6xl">
-          <h2 class="text-3xl font-bold">Let's work together.</h2>
-          <div class="mt-5 flex flex-wrap gap-3">
-            <a class="rounded-lg border border-slate-700 bg-slate-900 px-4 py-2.5 font-medium text-slate-100 transition hover:-translate-y-0.5 hover:border-slate-600" href="https://www.linkedin.com/in/mariraja/" target="_blank" rel="noreferrer">
-              LinkedIn ↗
-            </a>
-            <a class="rounded-lg border border-slate-700 bg-slate-900 px-4 py-2.5 font-medium text-slate-100 transition hover:-translate-y-0.5 hover:border-slate-600" href="https://github.com/mariraja2k05" target="_blank" rel="noreferrer">
-              GitHub ↗
-            </a>
-            <a class="rounded-lg border border-slate-700 bg-slate-900 px-4 py-2.5 font-medium text-slate-100 transition hover:-translate-y-0.5 hover:border-slate-600" href="#" id="resumeLink">
-              Resume ↗ (Add your CV link)
-            </a>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="border-t border-slate-800 py-4">
-      <div class="mx-auto flex w-[92%] max-w-6xl flex-wrap justify-between gap-3 text-sm text-slate-400">
-        <p>© <span id="year"></span> Mariraja — All rights reserved</p>
-        <p>Data Science & ML Engineer</p>
+  <!-- ══ PROJECTS ══ -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-tag">// 01</p>
+        <h2 class="section-title">Projects</h2>
+        <p class="section-sub">Live GitHub repos, auto-loaded fresh.</p>
       </div>
-    </footer>
+      <div class="projects-grid" id="projectsGrid">
+        <div class="loader-card">
+          <div class="loader-spinner"></div>
+          <p>Fetching repositories…</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
-  </body>
+  <!-- ══ SKILLS ══ -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-tag">// 02</p>
+        <h2 class="section-title">Skills</h2>
+        <p class="section-sub">Hover to explore my toolkit.</p>
+      </div>
+
+      <div class="skills-layout reveal">
+        <div class="skills-left">
+          <div class="skill-active-display">
+            <p class="sad-label">Active Skill</p>
+            <h3 class="sad-name" id="activeSkillName">Python</h3>
+            <div class="sad-bar"><div class="sad-fill" id="activeSkillBar" style="width:95%"></div></div>
+          </div>
+
+          <div class="skill-tags">
+            <button class="skill-tag is-active" data-skill="Python" data-level="95">🐍 Python</button>
+            <button class="skill-tag" data-skill="Machine Learning" data-level="85">🧠 ML</button>
+            <button class="skill-tag" data-skill="Data Analysis" data-level="88">📊 Data Analysis</button>
+            <button class="skill-tag" data-skill="Pandas" data-level="90">🐼 Pandas</button>
+            <button class="skill-tag" data-skill="NumPy" data-level="88">🔢 NumPy</button>
+            <button class="skill-tag" data-skill="Matplotlib" data-level="82">📈 Matplotlib</button>
+            <button class="skill-tag" data-skill="SQL" data-level="78">🗄️ SQL</button>
+            <button class="skill-tag" data-skill="Git & GitHub" data-level="85">🔧 Git</button>
+            <button class="skill-tag" data-skill="Deep Learning" data-level="75">🤖 Deep Learning</button>
+            <button class="skill-tag" data-skill="Scikit-Learn" data-level="83">⚙️ Scikit-Learn</button>
+          </div>
+        </div>
+
+        <div class="skills-right">
+          <div class="skills-orbit-wrap">
+            <div class="orbit-ring or1"></div>
+            <div class="orbit-ring or2"></div>
+            <div class="orbit-ring or3"></div>
+            <div class="orbit-center">
+              <img src="https://cdn.simpleicons.org/python/3776AB" alt="" width="40" height="40" id="orbitCenterIcon" />
+            </div>
+            <div class="orbit-dot od1" style="--angle:0deg;--radius:80px;--orbit-duration:12s" data-skill="Python" data-icon="https://cdn.simpleicons.org/python/3776AB"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" width="22" /></div>
+            <div class="orbit-dot od2 reverse" style="--angle:36deg;--radius:130px;--orbit-duration:20s" data-skill="Pandas" data-icon="https://cdn.simpleicons.org/pandas/150458"><img src="https://cdn.simpleicons.org/pandas/150458" alt="Pandas" width="22" /></div>
+            <div class="orbit-dot od3" style="--angle:72deg;--radius:80px;--orbit-duration:14s" data-skill="NumPy" data-icon="https://cdn.simpleicons.org/numpy/4DABCF"><img src="https://cdn.simpleicons.org/numpy/4DABCF" alt="NumPy" width="22" /></div>
+            <div class="orbit-dot od4" style="--angle:108deg;--radius:130px;--orbit-duration:22s" data-skill="SQL" data-icon="https://cdn.simpleicons.org/mysql/4479A1"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="SQL" width="22" /></div>
+            <div class="orbit-dot od5 reverse" style="--angle:144deg;--radius:80px;--orbit-duration:13s" data-skill="Git & GitHub" data-icon="https://cdn.simpleicons.org/github/ffffff"><img src="https://cdn.simpleicons.org/github/ffffff" alt="GitHub" width="22" /></div>
+            <div class="orbit-dot od6 reverse" style="--angle:180deg;--radius:130px;--orbit-duration:24s" data-skill="Matplotlib" data-icon="https://cdn.simpleicons.org/plotly/3F4F75"><img src="https://cdn.simpleicons.org/plotly/3F4F75" alt="Matplotlib" width="22" /></div>
+            <div class="orbit-dot od7" style="--angle:216deg;--radius:80px;--orbit-duration:15s" data-skill="Machine Learning" data-icon="https://cdn.simpleicons.org/pytorch/EE4C2C"><img src="https://cdn.simpleicons.org/pytorch/EE4C2C" alt="Machine Learning" width="22" /></div>
+            <div class="orbit-dot od8" style="--angle:252deg;--radius:130px;--orbit-duration:26s" data-skill="Data Analysis" data-icon="https://cdn.simpleicons.org/googleanalytics/E37400"><img src="https://cdn.simpleicons.org/googleanalytics/E37400" alt="Data Analysis" width="22" /></div>
+            <div class="orbit-dot od9 reverse" style="--angle:288deg;--radius:80px;--orbit-duration:16s" data-skill="Deep Learning" data-icon="https://cdn.simpleicons.org/tensorflow/FF6F00"><img src="https://cdn.simpleicons.org/tensorflow/FF6F00" alt="Deep Learning" width="22" /></div>
+            <div class="orbit-dot od10 reverse" style="--angle:324deg;--radius:130px;--orbit-duration:28s" data-skill="Scikit-Learn" data-icon="https://cdn.simpleicons.org/scikitlearn/F7931E"><img src="https://cdn.simpleicons.org/scikitlearn/F7931E" alt="Scikit-Learn" width="22" /></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ TRAINING ══ -->
+  <section class="section" id="training">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-tag">// 03</p>
+        <h2 class="section-title">Training</h2>
+      </div>
+      <article class="training-card glass-card reveal">
+        <div class="tc-meta">
+          <span class="tc-badge">Summer Training</span>
+          <span class="tc-year">2024</span>
+        </div>
+        <h3 class="tc-title">Summer Training Certificate</h3>
+        <p class="tc-desc">Completed an intensive summer training program focused on hands-on implementation, real-world project development, and practical application of technical skills across data and programming domains.</p>
+        <div class="tc-image-wrap">
+          <img
+            class="tc-image"
+            src="https://drive.google.com/thumbnail?id=1j4ECh2lh4CwNk_igI3H7iXB6JtQkXF7b&sz=w1200"
+            alt="Summer training certificate"
+            loading="lazy"
+            onerror="if(!this.dataset.f){this.dataset.f='1';this.src='https://drive.google.com/uc?export=view&id=1j4ECh2lh4CwNk_igI3H7iXB6JtQkXF7b';return;}this.onerror=null;this.style.display='none';"
+          />
+        </div>
+        <a class="btn btn-sm" href="https://drive.google.com/file/d/1j4ECh2lh4CwNk_igI3H7iXB6JtQkXF7b/view?usp=drivesdk" target="_blank" rel="noreferrer">
+          <span class="btn-text">View Certificate ↗</span>
+          <span class="btn-shine"></span>
+        </a>
+      </article>
+    </div>
+  </section>
+
+  <!-- ══ EDUCATION ══ -->
+  <section class="section" id="education">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-tag">// 04</p>
+        <h2 class="section-title">Education</h2>
+      </div>
+      <div class="edu-timeline">
+        <div class="edu-line"></div>
+
+        <article class="edu-card glass-card reveal" style="--delay:0ms">
+          <div class="edu-icon">🎓</div>
+          <div class="edu-body">
+            <span class="edu-badge">College • Present</span>
+            <h3>Lovely Professional University</h3>
+            <p>B.Tech in Computer Science & Engineering (CSE)</p>
+          </div>
+        </article>
+
+        <article class="edu-card glass-card reveal" style="--delay:120ms">
+          <div class="edu-icon">📚</div>
+          <div class="edu-body">
+            <span class="edu-badge">12th Grade • CBSE</span>
+            <h3>Edustar International School</h3>
+            <p>Higher Secondary (XII)</p>
+          </div>
+        </article>
+
+        <article class="edu-card glass-card reveal" style="--delay:240ms">
+          <div class="edu-icon">📖</div>
+          <div class="edu-body">
+            <span class="edu-badge">10th Grade • CBSE</span>
+            <h3>Edustar International School</h3>
+            <p>Secondary School (X)</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CERTIFICATIONS ══ -->
+  <section class="section" id="certifications">
+    <div class="container">
+      <div class="section-head reveal">
+        <p class="section-tag">// 05</p>
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-sub">Click any card to view in Google Drive.</p>
+      </div>
+      <div class="cert-marquee reveal">
+        <div class="cert-track" id="certTrack"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ CONTACT ══ -->
+  <section class="section section-last" id="contact">
+    <div class="container">
+      <div class="contact-wrap reveal">
+        <div class="contact-text">
+          <p class="section-tag">// 06</p>
+          <h2 class="contact-title">Let's build<br/><span class="accent-text">something great.</span></h2>
+          <p class="contact-sub">I'm currently available for internships and freelance work. Drop a message or connect through any platform.</p>
+        </div>
+        <div class="contact-links">
+          <a class="contact-btn magnetic" href="https://www.linkedin.com/in/mariraja/" target="_blank" rel="noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            LinkedIn
+          </a>
+          <a class="contact-btn magnetic" href="https://github.com/mariraja2k05" target="_blank" rel="noreferrer">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+          <a class="contact-btn magnetic" href="#" id="resumeLink">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ══ RESUME CHOOSER ══ -->
+<div class="resume-modal" id="resumeModal" aria-hidden="true">
+  <div class="resume-modal-backdrop" data-close-resume></div>
+  <div class="resume-modal-card" role="dialog" aria-modal="true" aria-labelledby="resumeModalTitle">
+    <button class="resume-modal-close" id="resumeModalClose" aria-label="Close resume options">✕</button>
+    <p class="resume-modal-tag">Choose Resume</p>
+    <h3 id="resumeModalTitle">Select Your CV Type</h3>
+    <div class="resume-options">
+      <a class="resume-option" id="generalCvLink" href="#" target="_blank" rel="noreferrer">
+        <span class="resume-option-title">Generalized CV</span>
+        <span class="resume-option-sub">Overall profile and skills</span>
+      </a>
+      <a class="resume-option" id="specialCvLink" href="#" target="_blank" rel="noreferrer">
+        <span class="resume-option-title">Specialized CV</span>
+        <span class="resume-option-sub">Focused domain expertise</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-inner">
+    <p>© <span id="year"></span> Mariraja · All rights reserved</p>
+    <p class="footer-role">Data Science & ML Engineer</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
 </html>
