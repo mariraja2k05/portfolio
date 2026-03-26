@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mariraja | Data Science & ML Engineer</title>
+    <meta
+      name="description"
+      content="Portfolio of Mariraja - Data Science and Machine Learning Engineer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased">
+    <header class="sticky top-3 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur" id="top">
+      <div class="mx-auto flex min-h-[104px] w-[94%] max-w-6xl items-center justify-center gap-4">
+        <nav class="flex flex-wrap gap-x-7 gap-y-2 text-base text-slate-300" aria-label="Primary navigation">
+          <a class="nav-link transition-colors hover:text-sky-300" href="#projects">Project</a>
+          <a class="nav-link transition-colors hover:text-sky-300" href="#skills">Skills</a>
+          <a class="nav-link transition-colors hover:text-sky-300" href="#training">Training</a>
+          <a class="nav-link transition-colors hover:text-sky-300" href="#education">Education</a>
+          <a class="nav-link transition-colors hover:text-sky-300" href="#certifications">Certifications</a>
+          <a class="nav-link transition-colors hover:text-sky-300" href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="bg-graphics" aria-hidden="true">
+        <span class="bg-orb orb-1"></span>
+        <span class="bg-orb orb-2"></span>
+        <span class="bg-orb orb-3"></span>
+        <span class="bg-line line-1"></span>
+        <span class="bg-line line-2"></span>
+      </div>
+      <section class="hero-section relative overflow-hidden pb-16 pt-24 md:pt-28">
+        <div class="pointer-events-none absolute inset-0"></div>
+        <div class="hero-shell relative mx-auto w-[92%] max-w-6xl animate-fade-up">
+          <div class="hero-grid">
+            <div class="hero-main">
+              <p class="hero-kicker">Portfolio · India · 2026</p>
+              <h1 class="hero-title text-4xl font-extrabold leading-tight sm:text-5xl md:text-6xl">
+                <span class="hero-line">DATA SCIENCE</span>
+                <span class="hero-line">ENGINEER</span>
+              </h1>
+              <p class="hero-name">Mariraja</p>
+              <p class="hero-description">
+                I am a data science and machine learning student focused on building practical,
+                real-world solutions. I enjoy working with data, creating predictive models,
+                and translating ideas into usable products.
+              </p>
+              <div class="hero-actions">
+                <a class="hero-btn hero-btn-primary" href="#projects">View Work</a>
+                <a class="hero-btn hero-btn-secondary" href="#contact">Get in Touch</a>
+              </div>
+              <p class="hero-availability">Available for internships and freelance collaborations</p>
+            </div>
+            <div class="hero-photo-wrap" aria-label="Profile image">
+              <img class="hero-photo" src="https://drive.google.com/thumbnail?id=14q87LrUIVB6lSE3pLbWlsrqYypoBPT3W&sz=w1000" alt="Mariraja profile photo" loading="lazy" onerror="if(!this.dataset.fallbackTried){this.dataset.fallbackTried='1';this.src='https://drive.google.com/uc?export=view&id=14q87LrUIVB6lSE3pLbWlsrqYypoBPT3W';return;}this.onerror=null;this.src='https://unavatar.io/linkedin/mariraja';" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16" id="projects">
+        <div class="mx-auto w-[92%] max-w-6xl">
+          <h2 class="text-3xl font-bold">Project</h2>
+          <p class="mt-2 text-slate-300">All your GitHub projects are listed automatically below.</p>
+          <div class="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3" id="projectsGrid"></div>
+        </div>
+      </section>
+
+      <section class="py-16" id="skills">
+        <div class="mx-auto w-[92%] max-w-6xl">
+          <h2 class="text-3xl font-bold">Skills</h2>
+          <div class="skills-wrap mt-8">
+            <div class="skills-orbit" aria-label="Interactive skills circle">
+              <div class="orbit-ring ring-1" aria-hidden="true"></div>
+              <div class="orbit-ring ring-2" aria-hidden="true"></div>
+              <div class="orbit-ring ring-3" aria-hidden="true"></div>
+
+              <div class="skills-center">
+                <p class="skills-center-label">Current Skill</p>
+                <h3 id="activeSkillName">Python</h3>
+              </div>
+
+              <button class="skill-dot orbit-1 is-active" type="button" style="--a: 0deg" data-skill="Python" aria-label="Python">
+                <span class="skill-dot-core"><img src="https://cdn.simpleicons.org/python/3776AB" alt="Python" loading="lazy" /></span>
+              </button>
+              <button class="skill-dot orbit-2" type="button" style="--a: 45deg" data-skill="Machine Learning" aria-label="Machine Learning">
+                <span class="skill-dot-core">🧠</span>
+              </button>
+              <button class="skill-dot orbit-3" type="button" style="--a: 95deg" data-skill="Data Analysis" aria-label="Data Analysis">
+                <span class="skill-dot-core">📊</span>
+              </button>
+              <button class="skill-dot orbit-1" type="button" style="--a: 128deg" data-skill="Pandas" aria-label="Pandas">
+                <span class="skill-dot-core"><img src="https://cdn.simpleicons.org/pandas/150458" alt="Pandas" loading="lazy" /></span>
+              </button>
+              <button class="skill-dot orbit-2" type="button" style="--a: 170deg" data-skill="NumPy" aria-label="NumPy">
+                <span class="skill-dot-core"><img src="https://cdn.simpleicons.org/numpy/4DABCF" alt="NumPy" loading="lazy" /></span>
+              </button>
+              <button class="skill-dot orbit-3" type="button" style="--a: 220deg" data-skill="Matplotlib" aria-label="Matplotlib">
+                <span class="skill-dot-core"><img src="https://cdn.simpleicons.org/plotly/3F4F75" alt="Matplotlib" loading="lazy" /></span>
+              </button>
+              <button class="skill-dot orbit-2" type="button" style="--a: 280deg" data-skill="SQL" aria-label="SQL">
+                <span class="skill-dot-core"><img src="https://cdn.simpleicons.org/mysql/4479A1" alt="SQL" loading="lazy" /></span>
+              </button>
+              <button class="skill-dot orbit-1" type="button" style="--a: 318deg" data-skill="Git & GitHub" aria-label="GitHub">
+                <span class="skill-dot-core"><img src="https://cdn.simpleicons.org/github/cfd4dc" alt="GitHub" loading="lazy" /></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16" id="training">
+        <div class="mx-auto w-[92%] max-w-6xl">
+          <h2 class="text-3xl font-bold">Training</h2>
+          <article class="training-card card-hover mt-5 rounded-2xl border border-slate-700 bg-gradient-to-b from-slate-900 to-slate-800/70 p-5">
+            <p class="text-xs font-semibold uppercase tracking-wider text-sky-300">Summer Training</p>
+            <h3 class="mt-1 text-xl font-semibold">Summer Training Certificate</h3>
+            <div class="training-media mt-4">
+              <img
+                class="training-image"
+                src="https://drive.google.com/thumbnail?id=1j4ECh2lh4CwNk_igI3H7iXB6JtQkXF7b&sz=w1200"
+                alt="Summer training certificate"
+                loading="lazy"
+                onerror="if(!this.dataset.fallbackTried){this.dataset.fallbackTried='1';this.src='https://drive.google.com/uc?export=view&id=1j4ECh2lh4CwNk_igI3H7iXB6JtQkXF7b';return;}this.onerror=null;this.src='https://picsum.photos/seed/summer-training/1200/760';"
+              />
+            </div>
+            <p class="mt-3 text-slate-300">
+              This certificate represents my summer training completion, focused on practical skills,
+              hands-on implementation, and real-world project learning.
+            </p>
+            <a class="mt-3 inline-block font-semibold text-sky-300 transition hover:text-sky-200" href="https://drive.google.com/file/d/1j4ECh2lh4CwNk_igI3H7iXB6JtQkXF7b/view?usp=drivesdk" target="_blank" rel="noreferrer">View Certificate ↗</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="py-16" id="education">
+        <div class="mx-auto w-[92%] max-w-6xl">
+          <h2 class="text-3xl font-bold">Education</h2>
+          <div class="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+            <article class="card-hover rounded-2xl border border-slate-700 bg-gradient-to-b from-slate-900 to-slate-800/70 p-5">
+              <p class="text-xs font-semibold uppercase tracking-wider text-sky-300">College</p>
+              <h3 class="mt-1 text-xl font-semibold">Lovely Professional University (LPU)</h3>
+              <p class="mt-2 text-slate-300">B.Tech in Computer Science and Engineering (CSE)</p>
+            </article>
+
+            <article class="card-hover rounded-2xl border border-slate-700 bg-gradient-to-b from-slate-900 to-slate-800/70 p-5">
+              <p class="text-xs font-semibold uppercase tracking-wider text-sky-300">12th Grade</p>
+              <h3 class="mt-1 text-xl font-semibold">Edustar International School</h3>
+              <p class="mt-2 text-slate-300">Board: CBSE</p>
+              <p class="mt-1 text-slate-300">Higher Secondary (XII)</p>
+            </article>
+
+            <article class="card-hover rounded-2xl border border-slate-700 bg-gradient-to-b from-slate-900 to-slate-800/70 p-5">
+              <p class="text-xs font-semibold uppercase tracking-wider text-sky-300">10th Grade</p>
+              <h3 class="mt-1 text-xl font-semibold">Edustar International School</h3>
+              <p class="mt-2 text-slate-300">Board: CBSE</p>
+              <p class="mt-1 text-slate-300">Secondary School (X)</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16" id="certifications">
+        <div class="mx-auto w-[92%] max-w-6xl">
+          <h2 class="text-3xl font-bold">Certifications</h2>
+          <p class="mt-2 text-slate-300">Click any certificate card to open your Google Drive certificates folder.</p>
+          <div class="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3" id="certGrid"></div>
+        </div>
+      </section>
+
+      <section class="py-16" id="contact">
+        <div class="mx-auto w-[92%] max-w-6xl">
+          <h2 class="text-3xl font-bold">Let's work together.</h2>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a class="rounded-lg border border-slate-700 bg-slate-900 px-4 py-2.5 font-medium text-slate-100 transition hover:-translate-y-0.5 hover:border-slate-600" href="https://www.linkedin.com/in/mariraja/" target="_blank" rel="noreferrer">
+              LinkedIn ↗
+            </a>
+            <a class="rounded-lg border border-slate-700 bg-slate-900 px-4 py-2.5 font-medium text-slate-100 transition hover:-translate-y-0.5 hover:border-slate-600" href="https://github.com/mariraja2k05" target="_blank" rel="noreferrer">
+              GitHub ↗
+            </a>
+            <a class="rounded-lg border border-slate-700 bg-slate-900 px-4 py-2.5 font-medium text-slate-100 transition hover:-translate-y-0.5 hover:border-slate-600" href="#" id="resumeLink">
+              Resume ↗ (Add your CV link)
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-800 py-4">
+      <div class="mx-auto flex w-[92%] max-w-6xl flex-wrap justify-between gap-3 text-sm text-slate-400">
+        <p>© <span id="year"></span> Mariraja — All rights reserved</p>
+        <p>Data Science & ML Engineer</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
