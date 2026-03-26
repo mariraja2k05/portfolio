@@ -367,7 +367,7 @@ function bindProjectCardEffects(grid) {
 }
 
 function buildProjectCards(repos, opts = {}) {
-  const cachedTag = opts.cached ? `<span class="project-stars">Cached</span>` : "";
+  const fallbackTag = opts.fallbackLabel ? `<span class="project-stars">${opts.fallbackLabel}</span>` : "";
   return repos.map(repo => `
     <article class="project-card glass-card reveal">
       <div style="overflow:hidden;border-radius:16px 16px 0 0;">
@@ -387,13 +387,26 @@ function buildProjectCards(repos, opts = {}) {
         <h3 class="project-title">${repo.name}</h3>
         <p class="project-desc">${repo.description || "Open this repository to view details."}</p>
         <div class="project-footer">
-          ${cachedTag}
+          ${fallbackTag}
           <span class="project-stars">★ ${repo.stargazers_count ?? 0}</span>
           <a class="project-link" href="${repo.html_url}" target="_blank" rel="noreferrer">VIEW ON GITHUB →</a>
         </div>
       </div>
     </article>
   `).join("");
+}
+
+async function fetchFallbackRepos() {
+  const res = await fetch(`./projects-fallback.json?v=${Date.now()}`, {
+    cache: "no-store"
+  });
+  if (!res.ok) throw new Error("Fallback project file not available");
+  const data = await res.json();
+  const repos = Array.isArray(data) ? data : data?.repos;
+  if (!Array.isArray(repos)) throw new Error("Invalid fallback project format");
+  return repos
+    .filter(r => !r.fork)
+    .sort((a, b) => new Date(b.pushed_at) - new Date(a.pushed_at));
 }
 
 async function fetchReposWithRetry(url, maxAttempts = 2) {
@@ -452,10 +465,22 @@ async function renderProjects() {
   } catch (err) {
     const cachedRepos = readProjectCache();
     if (cachedRepos?.length) {
-      grid.innerHTML = buildProjectCards(cachedRepos, { cached: true });
+      grid.innerHTML = buildProjectCards(cachedRepos, { fallbackLabel: "Cached" });
       bindProjectCardEffects(grid);
       return;
     }
+
+    try {
+      const fallbackRepos = await fetchFallbackRepos();
+      if (fallbackRepos.length) {
+        grid.innerHTML = buildProjectCards(fallbackRepos, { fallbackLabel: "Static" });
+        bindProjectCardEffects(grid);
+        return;
+      }
+    } catch {
+      // Fall through to error message.
+    }
+
     const reason = err?.message ? `<br><small>${err.message}</small>` : "";
     grid.innerHTML = `<div class="loader-card"><p>Could not load projects right now.${reason}</p></div>`;
   }
