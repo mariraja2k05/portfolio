@@ -88,10 +88,12 @@
           <div class="photo-glow"></div>
           <img
             class="hero-photo"
-            src="https://drive.google.com/thumbnail?id=14q87LrUIVB6lSE3pLbWlsrqYypoBPT3W&sz=w1000"
+            src="assets/profile.jpg"
+            data-drive-id="14q87LrUIVB6lSE3pLbWlsrqYypoBPT3W"
             alt="Mariraja"
-            loading="lazy"
-            onerror="if(!this.dataset.f){this.dataset.f='1';this.src='https://drive.google.com/uc?export=view&id=14q87LrUIVB6lSE3pLbWlsrqYypoBPT3W';return;}this.onerror=null;this.src='https://ui-avatars.com/api/?name=Mariraja&size=400&background=0d1117&color=00e5ff&bold=true';"
+            loading="eager"
+            fetchpriority="high"
+            onerror="if(!this.dataset.f1){this.dataset.f1='1';this.src='https://lh3.googleusercontent.com/d/'+this.dataset.driveId+'=s1000';return;}if(!this.dataset.f2){this.dataset.f2='1';this.src='https://drive.google.com/uc?export=view&id='+this.dataset.driveId;return;}this.onerror=null;this.src='https://ui-avatars.com/api/?name=Mariraja&size=400&background=0d1117&color=00e5ff&bold=true';"
           />
           <div class="photo-badge">
             <span class="badge-dot"></span>
